@@ -1,0 +1,63 @@
+{
+  "name": "vscode-yakumo",
+  "displayName": "Yakumo",
+  "publisher": "MaikoTan",
+  "description": "VSCode extension for Yakumo",
+  "version": "0.0.1",
+  "license": "AGPL-3.0",
+  "packageManager": "yarn@4.1.0",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "format": "prettier --write 'src/**/*' './*.{json,yml,yaml,md}'",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "repository": {
+    "type": "git+https",
+    "url": "https://github.com/cordiverse/vscode-yakumo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cordiverse/vscode-yakumo/issues"
+  },
+  "author": {
+    "name": "MaikoTan",
+    "email": "maiko.tan.coding@gmail.com",
+    "url": "https://github.com/MaikoTan"
+  },
+  "icon": "yakumo.png",
+  "categories": [
+    "Snippets",
+    "Linters"
+  ],
+  "keywords": [
+    "yakumo",
+    "develop",
+    "json schema",
+    "snippets"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {},
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.11.20",
+    "@types/vscode": "^1.77.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vscode/test-electron": "^2.3.0",
+    "@vscode/vsce": "^2.22.0",
+    "eslint": "^8.36.0",
+    "mocha": "^10.2.0",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3",
+    "yakumo": "^0.3.13"
+  }
+}
