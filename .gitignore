@@ -1,3 +1,5 @@
+node_modules/
+
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -13,3 +15,6 @@
 .pnp.*
 
 out/
+schemata/*.json
+
+*.vsix
