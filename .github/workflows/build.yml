@@ -1,0 +1,17 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - closed
+      - labeled
+
+jobs:
+  build:
+    uses: MaikoTan/workflows/.github/workflows/build-vscode-extension.yml@master
